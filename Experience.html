@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+		overflow: auto;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .background-video {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+       width: 90vw;
+      height: 250vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 123, 255, 0.7);
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 123, 255, 0.9);
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+    }
+    .menu a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .menu-toggle {
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: white;
+    }
+    .menu.show {
+      display: flex;
+    }
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      width: 80%;
+      max-width: 1250px;
+      margin-top: 80px;
+    }
+    .left {
+      width: 100%;
+      text-align: left;
+      margin-left: 50px;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-links a img {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s ease;
+    }
+    .social-links a img:hover {
+      transform: scale(1.2);
+    }
+    .container2 {
+      display: flex;
+      align-items: center;
+      line-height: 1.2;
+      margin: 0;
+      white-space: nowrap;
+    }
+    .icon {
+      width: 30px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .glow-text {
+      color: #FF00FF;
+      text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
+      font-weight: bold;
+	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+    }
+	.glow-text-small {
+      color: #00CCFF;
+      text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
+      font-weight: bold;
+	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+    }
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  width: 500px;           /* 固定每個框寬度 */
+  height: 450px;          /* 可選：讓兩框高度一致 */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05); /* 微背景可視化框 */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-title {
+  font-size: 18px;
+  color: #00FFFF;
+  text-shadow: 0 0 8px #00FFFF;
+  margin-bottom: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;            /* 讓圖片撐滿剩餘空間 */
+  object-fit: contain;     /* 保持比例內縮 */
+  border-radius: 6px;
+}
+  </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="Project.mp4" type="video/mp4">
+    </video>
+	
+    <div class="navbar">
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="Personal.html">Home</a>
+            <a href="Project.html">Project</a>
+            <a href="Experience.html">Experience</a>
+            <a href="#design">Design</a>
+            <a href="#contact">Cooperation</a>
+            <a href="#login">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1 style="margin: 0; font-size: 25px; color: rgba(0, 255, 255, 0.9); text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); font-weight: bold;">
+				Experience
+			</h1>
+			<br>
+			<br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2024</span></li>	
+			
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;"> &emsp;Oct.</span> Started serving in Ohmplus Technology Inc.
+				</p>
+			</div>
+			
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Sep.</span> Boot camp for Research and Development Substitute Services (RDSS).
+				</p>
+			</div>
+			<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Serving in Ohmplus Technology Inc. for RDSS
+					</p>
+					<img src="OhmplusWork.jpg" alt="OhmplusWork" style="width: auto; height: 400px;">
+				  </div>
+				</div>
+			<br>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Aug.</span> Graduation from National Sun Yat-Sen University institute of Communication Engineering.
+				</p>
+			</div>
+			
+			<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Graduation from National Sun Yat-Sen University
+					</p>
+					<img src="Graduation.jpg" alt="Graduation" style="width: auto; height: 400px;">
+				  </div>
+				</div>
+			<br>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jul.</span> Graduation Oral Examination of Institute of Communication Engineering.
+				</p>
+			</div>
+			<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Oral Examination
+					</p>
+					<img src="Camp.jpg" alt="Camp" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jun.</span> Published a paper at IEEE International Conference on Communications (ICC).
+				</p>
+			</div>
+			
+			<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  2024 IEEE International Conference on Communications
+					</p>
+					<img src="Denver.jpg" alt="Denver" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+			
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2023</span></li>	
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Sep.</span> Start serving the Teaching Assistant for Digital Communication Course.
+				</p>
+			</div>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jul.</span> Join the 2023 IEEE Communication Theory Workshop (CTW).
+				</p>
+			</div>
+		<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  2023 IEEE Communication Theory Workshop
+					</p>
+					<img src="CTW.jpg" alt="CTW" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+		
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Feb.</span> Start serving the Teaching Assistant for Communication System Simulation Course.
+				</p>
+			</div>
+			<br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2022</span></li>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Sep.</span> Start studying in National Sun Yat-Sen University Institute of Communication Engineering.
+				</p>
+			</div>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jul.</span> Graduation from National Kaohsiung University of Science and Technology Department of Computer and Communication Engineering.
+				</p>
+			</div>
+			<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Graduation from National Kaohsiung University of Science and Technology
+					</p>
+					<img src="NKUSTGrad.jpg" alt="NKUSTGrad" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+				
+			<br>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jul.</span> End of the internship in ASE Technology.
+				</p>
+			</div>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Feb.</span> Start the semester internship in ASE Technology.
+				</p>
+			</div>
+			<div style="text-align: center; margin: 20px;">
+			<div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  ASE Technology Semester Internship
+					</p>
+					<img src="ASEInternship.jpg" alt="ASEInternship" style="width: 600px; height: auto;">
+				  </div></div>
+				  <br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2021</span></li>
+			
+		<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;May.</span> Special Topic Exhibition with Second Prize
+				</p>
+			</div>
+			<div style="text-align: center; margin: 20px;">
+			<div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Special Topic Exhibition
+					</p>
+					<img src="Topic.jpg" alt="Topic" style="width: 600px; height: auto;">
+				  </div></div>
+				  
+		<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2020</span></li>
+			
+		<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Aug.</span> End the summer Work-Study in FLEXIUM INTERCONNECT INC
+				</p>
+			</div>
+				  
+		<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jul.</span> Start summer Work-Study in FLEXIUM INTERCONNECT INC
+				</p>
+			</div>		  
+		<br><br>
+		<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">2018</span></li>	
+
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Sep.</span> Start studying in National Kaohsiung University of Science and Technology Department of Computer and Communication Engineering.
+				</p>
+			</div>	
+			<div style="text-align: center; margin: 20px;">
+			<div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Start studying in National Kaohsiung University of Science and Technology
+					</p>
+					<img src="Interview.jpg" alt="Interview" style="width: 600px; height: auto;">
+				  </div></div>
+			
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<p>
+					<span style="color: #1abc9c;">&emsp;Jun.</span> Graduation from Kaohsiung Municipal Cianjhen Senior High School
+				</p>
+			</div>	  
+			<div style="text-align: center; margin: 20px;">
+			<div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  Graduation from Kaohsiung Municipal Cianjhen Senior High School
+					</p>
+					<img src="CJHS.jpg" alt="CJHS" style="width: 600px; height: auto;">
+				  </div></div>
+			
+        </div>
+       
+			
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

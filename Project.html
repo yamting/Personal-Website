@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+		overflow: auto;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .background-video {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      width: 90vw;
+      height: 250vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 123, 255, 0.7);
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 123, 255, 0.9);
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+    }
+    .menu a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .menu-toggle {
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: white;
+    }
+    .menu.show {
+      display: flex;
+    }
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      width: 80%;
+      max-width: 1250px;
+      margin-top: 80px;
+    }
+    .left {
+      width: 100%;
+      text-align: left;
+      margin-left: 50px;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-links a img {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s ease;
+    }
+    .social-links a img:hover {
+      transform: scale(1.2);
+    }
+    .container2 {
+      display: flex;
+      align-items: center;
+      line-height: 1.2;
+      margin: 0;
+      white-space: nowrap;
+    }
+    .icon {
+      width: 30px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .glow-text {
+      color: #FF00FF;
+      text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
+      font-weight: bold;
+	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+    }
+	.glow-text-small {
+      color: #00CCFF;
+      text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
+      font-weight: bold;
+	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+    }
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  width: 500px;           /* 固定每個框寬度 */
+  height: 450px;          /* 可選：讓兩框高度一致 */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05); /* 微背景可視化框 */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-title {
+  font-size: 18px;
+  color: #00FFFF;
+  text-shadow: 0 0 8px #00FFFF;
+  margin-bottom: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;            /* 讓圖片撐滿剩餘空間 */
+  object-fit: contain;     /* 保持比例內縮 */
+  border-radius: 6px;
+}
+  </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="Project.mp4" type="video/mp4">
+    </video>
+	
+    <div class="navbar">
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="Personal.html">Home</a>
+            <a href="Project.html">Project</a>
+            <a href="Experience.html">Experience</a>
+            <a href="#design">Design</a>
+            <a href="#contact">Cooperation</a>
+            <a href="#login">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1 style="margin: 0; font-size: 25px; color: rgba(0, 255, 255, 0.9); text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); font-weight: bold;">
+				Executed Projects
+			</h1>
+			<br>
+			<br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">Cooperative Organization</span></li>	
+			
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<img src="SINICA.png" alt="SINICA" style="width: 45px; height: auto;">
+				<p>
+					ACADEMIA SINICA
+				</p>
+			</div>
+			<br>
+			<br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">Planning Name:</span></li>	
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+				<img src="Wireless.png" alt="Wireless" style="width: 45px; height: auto;">
+				<p>
+					 Deep Learning Aided Multi-Antennas Wireless Communication System in mmWave and Sub-6G Band.  
+				</p>
+			</div>
+			<br>
+			<br>
+			<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">
+				 Project 1
+			</span></li>
+			<br>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+			<img src="1.png" alt="1" style="width: 45px; height: auto;">
+				<p>
+					Deep Learning-Based Precoding Design in RIS-Aided mmWave MIMO Systems With Practical Considerations
+				</p>
+			</div>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+			<img src="System.png" alt="System" style="width: 45px; height: auto;">
+				<p>
+					Communication System Model:
+				</p>
+			</div>
+				<br>
+				<br>
+				<br>
+				<div style="display: flex; justify-content: center;">
+				  <img src="DLPrecoder.png" alt="DLPrecoder" style="width: 600px; height: auto;">
+				</div>
+				<br>
+				<br>
+				<br>
+				<div style="display: flex; align-items: center; gap: 10px;">
+					<img src="NN.png" alt="NN" style="width: 45px; height: auto;">
+					<p>
+						 Nerual Network Model: 
+					</p>
+				</div>
+				
+			
+				&emsp;&emsp;&emsp;&emsp;<div class="image-row">
+										  <div class="image-box">
+											<h3 class="image-title">Traditional DNN Architecture</h3>
+											<img src="DNNPrecoder.png" alt="Original Model">
+										  </div>
+										  <div class="image-box">
+											<h3 class="image-title">LSTM Architecture</h3>
+											<img src="LSTMPrecoder.png" alt="Modified Model">
+										  </div>
+										</div>
+		<br><br><br>
+		
+		
+	   <li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">
+				 Project 2
+			</span></li>
+			
+		<br>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+			<div class="social-links">
+			<a href="https://ieeexplore.ieee.org/document/10720815" target="_blank"><img src="1.png" style="width: 45px; height: auto;" alt="1"></a>
+				<p>
+					Deep Reinforcement Learning-Based Precoding for Multi-RIS-Aided Multi-User Downlink Systems with Practical Phase Shift
+				</p>
+			</div>
+			</div>
+			<br>
+			<div style="display: flex; align-items: center; gap: 10px;">
+			<img src="System.png" alt="System" style="width: 45px; height: auto;">
+				<p>
+					Communication System Model:
+				</p>
+			</div>
+				<br>
+				<br>
+				<br>
+				<div style="display: flex; justify-content: center;">
+				  <img src="DDPGSystem.png" alt="DDPGSystem" style="width: 600px; height: auto;">
+				</div>
+				<br>
+				<br>
+				<br>
+				<div style="display: flex; align-items: center; gap: 10px;">
+					<img src="NN.png" alt="NN" style="width: 45px; height: auto;">
+					<p>
+						 Nerual Network Model: 
+					</p>
+				</div>
+			
+				<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  DDPG Architecture
+					</p>
+					<img src="DDPGNN.png" alt="DDPGNN" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+				
+				
+		<h1 style="margin: 0; font-size: 25px; color: rgba(0, 255, 255, 0.9); text-shadow: 0 0 10px rgba(0, 255, 255, 0.8); font-weight: bold;">
+			Course Projects
+		</h1>		
+		<br><br>
+		<li style="color: #FF00FF; text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;"><span class="glow-text">
+				 Computer Vision
+			</span></li>
+		<br>
+		<br>
+		
+		<div style="display: flex; align-items: center; gap: 10px;">
+			<img src="Classification.png" alt="Classification" style="width: 45px; height: auto;">
+				<p>
+					Discriminator of mixed breed cats based on Convolution Neural Network
+				</p>
+		</div>
+		<br>
+		<div style="display: flex; align-items: center; gap: 10px;">
+					<img src="NN.png" alt="NN" style="width: 45px; height: auto;">
+					<p>
+						 Nerual Network Model: 
+					</p>
+				</div>
+			
+				<div style="text-align: center; margin: 20px;">
+				  <div style="display: inline-block; border: 4px solid rgba(0,255,255,0.3); padding: 10px; border-radius: 8px;">
+					<p style="
+					  margin: 0 0 10px 0;
+					  font-size: 18px;
+					  font-weight: bold;
+					  color: #00FFFF;
+					  text-shadow: 0 0 8px #00FFFF;
+					">
+					  ResNet-101 Architecture
+					</p>
+					<img src="ResNet.png" alt="ResNet" style="width: 600px; height: auto;">
+				  </div>
+				</div>
+		
+		
+		
+        </div>
+       
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
