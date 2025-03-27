@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
 <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
-		overflow: auto;
+      overflow: auto;
       font-family: 'Times New Roman', serif;
       margin: 0;
       padding: 0;
@@ -23,7 +21,7 @@
       position: fixed;
       top: 20%;
       left: 50%;
-       width: 90vw;
+      width: 90vw;
       height: 250vh;
       transform: translate(-50%, -50%);
       object-fit: cover;
@@ -111,93 +109,59 @@
       color: #FF00FF;
       text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
       font-weight: bold;
-	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+      font-size: 20px;
     }
-	.glow-text-small {
+    .glow-text-small {
       color: #00CCFF;
       text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF0099;
       font-weight: bold;
-	  font-size: 20px; /* ← 新增這一行，根據需求可調整大小 */
+      font-size: 20px;
     }
-.image-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
+    .image-box img,
+    .image-row img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
 
-.image-box {
-  width: 500px;           /* 固定每個框寬度 */
-  height: 450px;          /* 可選：讓兩框高度一致 */
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05); /* 微背景可視化框 */
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,255,255,0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+    /* ✅ 手機優化 (響應式設計) */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+      }
 
-.image-title {
-  font-size: 18px;
-  color: #00FFFF;
-  text-shadow: 0 0 8px #00FFFF;
-  margin-bottom: 10px;
-}
+      .left {
+        margin-left: 0;
+        width: 100%;
+      }
 
-.image-box img {
-  width: 100%;
-  height: auto;
-  flex-grow: 1;            /* 讓圖片撐滿剩餘空間 */
-  object-fit: contain;     /* 保持比例內縮 */
-  border-radius: 6px;
-  
-   /* ========= 響應式設計 ========= */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-                width: 95%;
-            }
+      .glow-text,
+      .glow-text-small {
+        font-size: 18px;
+      }
 
-            .left, .right {
-                width: 100%;
-                margin: 0;
-            }
+      .image-box img,
+      .image-row img {
+        width: 100% !important;
+        height: auto !important;
+      }
 
-            .right {
-                margin-top: 30px;
-                margin-right: 0;
-            }
+      .navbar {
+        justify-content: space-between;
+        padding: 10px;
+      }
 
-            .navbar {
-                justify-content: space-between;
-            }
+      .menu {
+        top: 45px;
+        right: 10px;
+      }
 
-            .social-links a img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .container2 {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                white-space: normal;
-            }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1, h2, p, li {
-                font-size: 16px;
-            }
-}
+      h1, h2, p, li {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
