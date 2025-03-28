@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-<style>
-    html { scroll-behavior: smooth; }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       overflow: auto;
       font-family: 'Times New Roman', serif;
@@ -70,7 +72,7 @@
     .container {
       display: flex;
       justify-content: flex-start;
-      width: 80%;
+      width: 90%;
       max-width: 1250px;
       margin-top: 80px;
     }
@@ -98,7 +100,6 @@
       align-items: center;
       line-height: 1.2;
       margin: 0;
-      white-space: nowrap;
     }
     .icon {
       width: 30px;
@@ -117,11 +118,14 @@
       font-weight: bold;
       font-size: 20px;
     }
-    .image-box img,
-    .image-row img {
-      width: 100%;
+    img {
+      max-width: 100%;
       height: auto;
       border-radius: 6px;
+    }
+    div[style*="inline-block"] {
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     /* ✅ 手機優化 (響應式設計) */
@@ -131,35 +135,28 @@
         width: 95%;
         margin: 0 auto;
       }
-
       .left {
         margin-left: 0;
         width: 100%;
+        padding: 0 10px;
       }
-
       .glow-text,
       .glow-text-small {
         font-size: 18px;
       }
-
-      .image-box img,
-      .image-row img {
-        width: 100% !important;
-        height: auto !important;
-      }
-
       .navbar {
         justify-content: space-between;
         padding: 10px;
       }
-
       .menu {
         top: 45px;
         right: 10px;
       }
-
       h1, h2, p, li {
         font-size: 16px;
+      }
+      div[style*="inline-block"] {
+        padding: 5px !important;
       }
     }
   </style>
